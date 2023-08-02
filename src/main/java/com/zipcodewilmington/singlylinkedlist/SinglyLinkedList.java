@@ -5,30 +5,33 @@ import java.util.Comparator;
 /**
  * Created by leon on 1/10/18.
  */
-public class SinglyLinkedList<T> implements LinkedListIface{
+public class SinglyLinkedList<T> implements LinkedListIface {
 
     private Node<T> head = null;
-    public SinglyLinkedList(){}
+
+    public SinglyLinkedList() {
+    }
 
 
-    public Boolean isEmpty(){
+    public Boolean isEmpty() {
         return head == null;
     }
+
     @Override
     public void add(Object data) {
         Node newNode = new Node(data);
         if (this.head == null) {
             this.head = newNode;
-        }
-        else {
+        } else {
             Node<T> temp = head;
-            while(temp.hasNext()){
-                temp= temp.getNext();
+            while (temp.hasNext()) {
+                temp = temp.getNext();
             }
             temp.setNext(newNode);
         }
 
     }
+
     @Override
     public void remove(int index) throws IndexOutOfBoundsException {
 
@@ -51,7 +54,14 @@ public class SinglyLinkedList<T> implements LinkedListIface{
 
     @Override
     public int size() {
-        return 0;
+        if (this.isEmpty()) return 0;
+        int counter = 0;
+        Node<T> temp = head;
+        do{
+            counter++;
+            temp= temp.getNext();
+        } while (temp!=null);
+        return counter;
     }
 
     @Override
@@ -65,17 +75,17 @@ public class SinglyLinkedList<T> implements LinkedListIface{
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         StringBuilder sb = new StringBuilder();
 
         sb.append("head -> ");
 
-        if(head != null){
+        if (head != null) {
             Node<T> temp = head;
             do {
-                sb.append("["+temp.getData()+"] -> ");
+                sb.append("[" + temp.getData() + "] -> ");
                 temp = temp.getNext();
-            }while(temp!= null);
+            } while (temp != null);
         }
 
 

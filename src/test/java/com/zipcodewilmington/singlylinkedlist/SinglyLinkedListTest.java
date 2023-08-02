@@ -95,11 +95,12 @@ public void testIsEmpty(){
 
     @Test
     public void size() {
-//        SinglyLinkedList<Integer> list = new SinglyLinkedList<>();
-//        Assertions.assertEquals(0, list.size());
-//
-//        list.add(1);
-//        Assertions.assertEquals(1, list.size());
+        SinglyLinkedList<Integer> list = new SinglyLinkedList<>();
+        Assertions.assertEquals(0, list.size());
+
+        list.add(1);
+
+        Assertions.assertEquals(1, list.size());
 
     }
 
