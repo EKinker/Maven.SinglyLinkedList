@@ -1,9 +1,11 @@
 package com.zipcodewilmington.singlylinkedlist;
 
+import java.util.Comparator;
+
 /**
  * Created by leon on 1/10/18.
  */
-public class SinglyLinkedList<T> {
+public class SinglyLinkedList<T> implements LinkedListIface{
 
     class Node{
 
@@ -30,25 +32,24 @@ public class SinglyLinkedList<T> {
     Node first= null;
     Node last= null;
 
-    public void add(T value){  //add a new node to the end of the list
-        Node node = new Node(value);
-        if (first == null){ //for the first item in the linked list
-            first = node; //size of list = 1
-            last = node; //so first = last
-        } else { //otherwise point the current last to the new node
-            last.setNextNode(node);
-            last = node; //and make the new node the new last
-        }
+
+
+    @Override
+    public void add(Object data) { //add a new node to the end of the list
+//        Node node = new Node();
+//        if (first == null){ //for the first item in the linked list
+//            first = node; //size of list = 1
+//            last = node; //so first = last
+//        } else { //otherwise point the current last to the new node
+//            last.setNextNode(node);
+//            last = node; //and make the new node the new last
+//        }
     }
 
     public void remove(int index){ //remove a node from the list given an index
 
     }
 
-    public boolean contains(T valueToFind){
-
-        return false;
-    }
 
     public int findElement(T valueToFind){ //get the index of a given value/element
 
@@ -60,18 +61,26 @@ public class SinglyLinkedList<T> {
         return 0;
     }
 
-    public T get(int index) { //return the element from the list if given the index
-
+    @Override
+    public SinglyLinkedList copy() {
         return null;
     }
 
-    public SinglyLinkedList<T> copy(SinglyLinkedList<T> list){
-
-        return null;
-    }
-
-    public void sort(SinglyLinkedList<T> list){
+    @Override
+    public void sort(Comparator comparator) {
 
     }
+
+
+    @Override
+    public boolean contains(Object data) {
+        return false;
+    }
+
+    @Override
+    public int find(Object data) {
+        return 0;
+    }
+
 
 }
