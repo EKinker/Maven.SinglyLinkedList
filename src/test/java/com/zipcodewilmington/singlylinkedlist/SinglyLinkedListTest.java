@@ -69,28 +69,33 @@ public void testIsEmpty(){
 
     @Test
     public void contains() {
-//        SinglyLinkedList<String> list = new SinglyLinkedList<>();
-//        String expected = "Crosby";
-//        list.add(expected);
-//        list.add("Stills");
-//        list.add("Nash");
-//        list.add("Young");
-//
-//        Assertions.assertTrue(list.contains(expected));
+        SinglyLinkedList<String> list = new SinglyLinkedList<>();
+        String expected = "Crosby";
+        list.add(expected);
+        list.add("Stills");
+        list.add("Nash");
+        list.add("Young");
+
+        Assertions.assertTrue(list.contains(expected));
     }
 
     @Test
-    public void findElement() {
-//        SinglyLinkedList<Integer> list = new SinglyLinkedList<>();
-//        list.add(1);
-//        list.add(2);
-//        list.add(3);
-//        list.add(4);
-//
-//        int expected = 2;
-//        int actual = list.find(3);
-//
-//        Assertions.assertEquals(expected, actual);
+    public void testFind() {
+        SinglyLinkedList<Integer> list = new SinglyLinkedList<>();
+        list.add(1);
+        list.add(2);
+        list.add(3);
+        list.add(4);
+
+        int expected = 2;
+        int actual = list.find(3);
+
+        Assertions.assertEquals(expected, actual);
+    }
+    @Test
+    public void testFind2(){
+        SinglyLinkedList<Integer> list = new SinglyLinkedList<>();
+        Assert.assertEquals(-1, list.find(1));
     }
 
     @Test
