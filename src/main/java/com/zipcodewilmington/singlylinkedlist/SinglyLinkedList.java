@@ -7,6 +7,7 @@ import java.util.Comparator;
  */
 public class SinglyLinkedList<T> implements LinkedListIface{
 
+
     class Node{
 
         T value;
@@ -33,31 +34,33 @@ public class SinglyLinkedList<T> implements LinkedListIface{
     Node last= null;
 
 
+    @Override
+    public void add(Object data) {
+
+    }
 
     @Override
-    public void add(Object data) { //add a new node to the end of the list
-//        Node node = new Node();
-//        if (first == null){ //for the first item in the linked list
-//            first = node; //size of list = 1
-//            last = node; //so first = last
-//        } else { //otherwise point the current last to the new node
-//            last.setNextNode(node);
-//            last = node; //and make the new node the new last
-//        }
-    }
-
-    public void remove(int index){ //remove a node from the list given an index
+    public void remove(int index) throws IndexOutOfBoundsException {
 
     }
 
-
-    public int findElement(T valueToFind){ //get the index of a given value/element
-
-        return -1;
+    @Override
+    public Object get(int index) throws IndexOutOfBoundsException {
+        return null;
     }
 
-    public int size(){ // get the size of the list
+    @Override
+    public boolean contains(Object data) {
+        return false;
+    }
 
+    @Override
+    public int find(Object data) {
+        return 0;
+    }
+
+    @Override
+    public int size() {
         return 0;
     }
 
@@ -72,15 +75,6 @@ public class SinglyLinkedList<T> implements LinkedListIface{
     }
 
 
-    @Override
-    public boolean contains(Object data) {
-        return false;
-    }
-
-    @Override
-    public int find(Object data) {
-        return 0;
-    }
 
 
 }
