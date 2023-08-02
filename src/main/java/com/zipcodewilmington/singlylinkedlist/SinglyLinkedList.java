@@ -64,7 +64,25 @@ public class SinglyLinkedList<T> implements LinkedListIface{
 
     }
 
+    @Override
+    public String toString(){
+        StringBuilder sb = new StringBuilder();
 
+        sb.append("head -> ");
+
+        if(head != null){
+            Node<T> temp = head;
+            do {
+                sb.append("["+temp.getData()+"] -> ");
+                temp = temp.getNext();
+            }while(temp!= null);
+        }
+
+
+        sb.append("NULL");
+
+        return sb.toString();
+    }
 
 
 }

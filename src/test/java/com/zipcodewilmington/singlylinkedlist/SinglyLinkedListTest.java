@@ -24,7 +24,22 @@ public void testIsEmpty(){
 }
 
     @Test
-    public void addNode() {
+    public void testAdd(){
+        SinglyLinkedList<Integer> list = new SinglyLinkedList<>();
+        list.add(42);
+        Assert.assertFalse(list.isEmpty());
+    }
+
+    @Test
+    public void testAdd2(){
+        SinglyLinkedList<Integer> list = new SinglyLinkedList<>();
+        list.add(42);
+        list.add(10000000);
+        Assert.assertFalse(list.isEmpty());
+    }
+
+    @Test
+    public void testAdddddddd() {
 //        SinglyLinkedList<Integer> list = new SinglyLinkedList<>();
 //        int expected = 42;
 //        int expectedSize = 1;
@@ -107,5 +122,34 @@ public void testIsEmpty(){
 
     @Test
     public void sort() {
+    }
+
+    @Test
+    public void testToString(){
+        SinglyLinkedList<Integer> list = new SinglyLinkedList<>();
+        String expected = "head -> NULL";
+
+        Assert.assertEquals(expected, list.toString());
+    }
+
+    @Test
+    public void testToString2(){
+        SinglyLinkedList<Integer> list = new SinglyLinkedList<>();
+        list.add(1);
+
+        String expected = "head -> [1] -> NULL";
+
+        Assert.assertEquals(expected, list.toString());
+    }
+
+    @Test
+    public void testToString3(){
+        SinglyLinkedList<Integer> list = new SinglyLinkedList<>();
+        list.add(1);
+        list.add(2);
+
+        String expected = "head -> [1] -> [2] -> NULL";
+
+        Assert.assertEquals(expected, list.toString());
     }
 }
