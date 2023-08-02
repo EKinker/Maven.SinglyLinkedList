@@ -3,21 +3,21 @@ package com.zipcodewilmington.singlylinkedlist;
 /**
  * Created by leon on 1/10/18.
  */
-public class SinglyLinkedList {
+public class SinglyLinkedList<T> {
 
     class Node{
 
-        int value;
+        T value;
         Node nextNode;
 
-        public Node(int value){
+        public Node(T value){
             this.value = value;
 //            this.nextNode = null;
         }
-        public int getValue() {
+        public T getValue() {
             return value;
         }
-        public void setValue(int value){ this.value = value;}
+        public void setValue(T value){ this.value = value;}
 
         public Node getNextNode() {
             return nextNode;
@@ -30,7 +30,7 @@ public class SinglyLinkedList {
     Node first= null;
     Node last= null;
 
-    public void addNode(int value){  //add a new node to the end of the list
+    public void add(T value){  //add a new node to the end of the list
         Node node = new Node(value);
         if (first == null){ //for the first item in the linked list
             first = node; //size of list = 1
@@ -41,16 +41,16 @@ public class SinglyLinkedList {
         }
     }
 
-    public void removeNode(int index){ //remove a node from the list given an index
+    public void remove(int index){ //remove a node from the list given an index
 
     }
 
-    public boolean contains(int valueToFind){
+    public boolean contains(T valueToFind){
 
         return false;
     }
 
-    public int findElement(int valueToFind){ //get the index of a given value/element
+    public int findElement(T valueToFind){ //get the index of a given value/element
 
         return -1;
     }
@@ -60,17 +60,17 @@ public class SinglyLinkedList {
         return 0;
     }
 
-    public int get(int index) { //return the element from the list if given the index
-
-        return -1;
-    }
-
-    public SinglyLinkedList copy(SinglyLinkedList list){
+    public T get(int index) { //return the element from the list if given the index
 
         return null;
     }
 
-    public void sort(SinglyLinkedList list){
+    public SinglyLinkedList<T> copy(SinglyLinkedList<T> list){
+
+        return null;
+    }
+
+    public void sort(SinglyLinkedList<T> list){
 
     }
 
