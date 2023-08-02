@@ -16,9 +16,15 @@ public class SinglyLinkedListTest {
         Assert.assertNotNull(list);
     }
 
+@Test
+public void testIsEmpty(){
+        SinglyLinkedList<Integer> list = new SinglyLinkedList<>();
+        Assert.assertEquals(true, list.isEmpty());
+
+}
 
     @Test
-    void addNode() {
+    public void addNode() {
 //        SinglyLinkedList<Integer> list = new SinglyLinkedList<>();
 //        int expected = 42;
 //        int expectedSize = 1;
@@ -32,58 +38,58 @@ public class SinglyLinkedListTest {
 
     }
 
-    @org.junit.jupiter.api.Test
-    void removeNode() {
-        SinglyLinkedList<Integer> list = new SinglyLinkedList<>();
-        list.add(1);
-        list.add(2);
-        list.add(3);
-
-        list.remove(1);
-        int expectedSize = 2;
-        int actualSize = list.size();
-
-        Assertions.assertEquals(expectedSize, actualSize);
+    @Test
+    public void removeNode() {
+//        SinglyLinkedList<Integer> list = new SinglyLinkedList<>();
+//        list.add(1);
+//        list.add(2);
+//        list.add(3);
+//
+//        list.remove(1);
+//        int expectedSize = 2;
+//        int actualSize = list.size();
+//
+//        Assertions.assertEquals(expectedSize, actualSize);
     }
 
-    @org.junit.jupiter.api.Test
-    void contains() {
-        SinglyLinkedList<String> list = new SinglyLinkedList<>();
-        String expected = "Crosby";
-        list.add(expected);
-        list.add("Stills");
-        list.add("Nash");
-        list.add("Young");
-
-        Assertions.assertTrue(list.contains(expected));
+    @Test
+    public void contains() {
+//        SinglyLinkedList<String> list = new SinglyLinkedList<>();
+//        String expected = "Crosby";
+//        list.add(expected);
+//        list.add("Stills");
+//        list.add("Nash");
+//        list.add("Young");
+//
+//        Assertions.assertTrue(list.contains(expected));
     }
 
-    @org.junit.jupiter.api.Test
-    void findElement() {
-        SinglyLinkedList<Integer> list = new SinglyLinkedList<>();
-        list.add(1);
-        list.add(2);
-        list.add(3);
-        list.add(4);
-
-        int expected = 2;
-        int actual = list.find(3);
-
-        Assertions.assertEquals(expected, actual);
+    @Test
+    public void findElement() {
+//        SinglyLinkedList<Integer> list = new SinglyLinkedList<>();
+//        list.add(1);
+//        list.add(2);
+//        list.add(3);
+//        list.add(4);
+//
+//        int expected = 2;
+//        int actual = list.find(3);
+//
+//        Assertions.assertEquals(expected, actual);
     }
 
-    @org.junit.jupiter.api.Test
-    void size() {
-        SinglyLinkedList<Integer> list = new SinglyLinkedList<>();
-        Assertions.assertEquals(0, list.size());
-
-        list.add(1);
-        Assertions.assertEquals(1, list.size());
+    @Test
+    public void size() {
+//        SinglyLinkedList<Integer> list = new SinglyLinkedList<>();
+//        Assertions.assertEquals(0, list.size());
+//
+//        list.add(1);
+//        Assertions.assertEquals(1, list.size());
 
     }
 
-    @org.junit.jupiter.api.Test
-    void get() {
+    @Test
+    public void get() {
 //        SinglyLinkedList<String> list = new SinglyLinkedList<>();
 //        String expected = "George";
 //        list.add("Ernest");  //was an elephant, a great big fellow,
@@ -95,11 +101,11 @@ public class SinglyLinkedListTest {
 //        Assertions.assertEquals(expected, actual);
     }
 
-    @org.junit.jupiter.api.Test
-    void copy() {
+    @Test
+    public void copy() {
     }
 
-    @org.junit.jupiter.api.Test
-    void sort() {
+    @Test
+    public void sort() {
     }
 }

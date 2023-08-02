@@ -7,38 +7,28 @@ import java.util.Comparator;
  */
 public class SinglyLinkedList<T> implements LinkedListIface{
 
+    private Node<T> head = null;
+    public SinglyLinkedList(){}
 
-    class Node{
 
-        T value;
-        Node nextNode;
-
-        public Node(T value){
-            this.value = value;
-//            this.nextNode = null;
-        }
-        public T getValue() {
-            return value;
-        }
-        public void setValue(T value){ this.value = value;}
-
-        public Node getNextNode() {
-            return nextNode;
-        }
-        public void setNextNode(Node nextNode){
-            this.nextNode = nextNode;
-        }
+    public Boolean isEmpty(){
+        return head == null;
     }
-
-    Node first= null;
-    Node last= null;
-
-
     @Override
     public void add(Object data) {
+        Node newNode = new Node(data);
+        if (this.head == null) {
+            this.head = newNode;
+        }
+        else {
+            Node<T> temp = head;
+            while(temp.hasNext()){
+                temp= temp.getNext();
+            }
+            temp.setNext(newNode);
+        }
 
     }
-
     @Override
     public void remove(int index) throws IndexOutOfBoundsException {
 
