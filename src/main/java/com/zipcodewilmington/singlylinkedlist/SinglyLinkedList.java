@@ -34,12 +34,23 @@ public class SinglyLinkedList<T> implements LinkedListIface {
 
     @Override
     public void remove(int index) throws IndexOutOfBoundsException {
+        
 
     }
 
     @Override
-    public Object get(int index) throws IndexOutOfBoundsException {
-        return null;
+    public T get(int index) throws IndexOutOfBoundsException {
+        Node<T> temp = head;
+        int counter = 0;
+
+        while (index != counter){
+            if (counter == index) return temp.getData();
+            counter++;
+            temp = temp.getNext();
+        }
+
+
+        return temp.getData();
     }
 
     @Override

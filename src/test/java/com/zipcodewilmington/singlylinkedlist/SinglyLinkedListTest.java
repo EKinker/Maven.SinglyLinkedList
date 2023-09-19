@@ -80,6 +80,11 @@ public void testIsEmpty(){
     }
 
     @Test
+    public void testContains2(){
+
+    }
+
+    @Test
     public void testFind() {
         SinglyLinkedList<Integer> list = new SinglyLinkedList<>();
         list.add(1);
@@ -110,17 +115,18 @@ public void testIsEmpty(){
     }
 
     @Test
-    public void get() {
-//        SinglyLinkedList<String> list = new SinglyLinkedList<>();
-//        String expected = "George";
-//        list.add("Ernest");  //was an elephant, a great big fellow,
-//        list.add("Leonard"); //was a lion with a six foot tail,
-//        list.add(expected); // was a goat, and his beard was yellow, and
-//        list.add("James"); // was a very small snail.
-//
-//        String actual = list.get(2);
-//        Assertions.assertEquals(expected, actual);
+    public void testGet() {
+        SinglyLinkedList<String> list = new SinglyLinkedList<>();
+        String expected = "George";
+        list.add("Ernest");  //was an elephant, a great big fellow,
+        list.add("Leonard"); //was a lion with a six foot tail,
+        list.add(expected); // was a goat, and his beard was yellow, and
+        list.add("James"); // was a very small snail.
+
+        String actual = list.get(2);
+        Assertions.assertEquals(expected, actual);
     }
+
 
     @Test
     public void copy() {
